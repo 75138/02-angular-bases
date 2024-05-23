@@ -1,0 +1,18 @@
+<h4>Agregar personaje</h4>
+<form class="row" (ngSubmit)="emitCharacter()">
+  <input type="text" placeholder="Nombre"  class="form-control mb-2" [(ngModel)]="character.name" name="name">
+  <input type="number" placeholder="Poder" class="form-control mb-2" [(ngModel)]="character.power" name="power">
+  <button type="submit" class="btn btn-sm btn-primary">
+    Agregar
+  </button>
+</form>
+
+<pre></pre>
+
+<ul class="list-group">
+  <li class="list-group-item list-group-item-primary text-center"><h3>Información temporal</h3></li>
+  <li class="list-group-item d-flex justify-content-between">Name: <span>{{ character.name }}</span></li>
+  <li class="list-group-item d-flex justify-content-between">Power: <span>{{ character.power }}</span></li>
+</ul>
+
+<!--<pre>{{ character | json }}</pre>-->
